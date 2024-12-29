@@ -11,7 +11,7 @@ They are a mod and refactory of the excellent work done by Brian Turek, Allan Ji
 ## How to use
 
 ### QRCodeLib example (vbscript):
-```
+```vbscript
 Const FORE_COLOR = "#000000"
 Const BACK_COLOR = "#ffffff"
 Const SCALE = 10
@@ -38,7 +38,7 @@ adoStream.Close
 Set adoStream = Nothing 
 ```
 ### Verify2FA example (Jscript):
-```
+```javascript
 var totp = new Totp(30, 6);
 var secret = "ABCDEFGHIJKLMNOP"; // your secret CHAR(16)
 var otp = totp.getOtp(secret); 
