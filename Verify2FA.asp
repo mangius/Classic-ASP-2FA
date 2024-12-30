@@ -2,6 +2,11 @@
 <script language="JScript" runat="server">
 
 /**
+ * ---------------------------------------------------------------------
+ * Jscript SHA implementation mod to be used with Classic ASP (By Mangius)
+ * Also include TOTP and HOTP generation (6-8 digits)
+ * ---------------------------------------------------------------------
+ *
  * @preserve A JavaScript implementation of the SHA family of hashes, as
  * defined in FIPS PUB 180-2 as well as the corresponding HMAC implementation
  * as defined in FIPS PUB 198a
