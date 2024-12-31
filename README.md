@@ -31,7 +31,7 @@ Response.ContentType = "image/png"
 Set adoStream = Server.CreateObject("ADODB.Stream") 
 adoStream.Open
 adoStream.Type = 1
-FPath = Server.MapPath("path")
+FPath = Server.MapPath(path)
 adoStream.LoadFromFile FPath
 Response.BinaryWrite adoStream.Read 
 adoStream.Close
