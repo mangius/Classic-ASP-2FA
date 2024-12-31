@@ -4,7 +4,7 @@ This project is made for Classic ASP developers who need a ready-to-use library 
 The entire library consists of just two files:
 
 1. QRCodeLib.asp generate the necessary qrcode to scan with authentication apps (Vbscript)
-2. Verify2FA.asp check and validate the TOTP code. It can be used to check both TOTP and HOTP code (Jscript Ecmascript3 compatible)
+2. Verify2FA.asp a JavaScript implementation of the SHA family of hashes. It can be used to check both TOTP and HOTP code (Jscript Ecmascript3 compatible)
 
 They are a mod and refactoring of the excellent work done by Brian Turek, Allan Jiang and Yasunori Ikeda.
 
