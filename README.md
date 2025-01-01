@@ -43,13 +43,12 @@ var totp = new Totp(30, 6);
 var secret = "ABCDEFGHIJKLMNOP"; // your secret (16 digits)
 var otp = totp.getOtp(secret); 
 var OTPvalue = "";
-
-  if (Request.Form("OTP") != null && Request.Form("OTP") != undefined) {
-     OTPvalue = ("" + Request.Form("OTP")).replace(/^\s+|\s+$/g, ""); 
-  }
-  if (otp === OTPvalue) {
-    Response.Redirect("success.asp");
+if (Request.Form("OTP") != null && Request.Form("OTP") != undefined) {
+    OTPvalue = ("" + Request.Form("OTP")).replace(/^\s+|\s+$/g, ""); 
+}
+if (otp === OTPvalue) {
+   Response.Redirect("success.asp");
 } else {
-    Response.Redirect("failure.asp");
+   Response.Redirect("failure.asp");
 }
 ```
