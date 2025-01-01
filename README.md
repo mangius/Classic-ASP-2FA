@@ -16,7 +16,7 @@ Const FORE_COLOR = "#000000"
 Const BACK_COLOR = "#ffffff"
 Const SCALE = 10
 
-dim path: path = "yourpath"
+dim Path: Path = Server.MapPath("yourpath")
 
 'create QrCode image
 Dim OAuthPath
@@ -24,15 +24,14 @@ OAuthPath = "otpauth://totp/yoursite:youruser?secret=yoursecret&issuer=yoursite"
 Dim sbls: Set sbls = CreateSymbols(ECR_M, 40, False)
 sbls.AppendText OAuthPath
 Dim sbl: Set sbl = sbls.Item(0)
-sbl.SaveAs2 path, SCALE, True, False, FORE_COLOR, BACK_COLOR 
+sbl.SaveAs2 Path, SCALE, True, False, FORE_COLOR, BACK_COLOR 
 
 'publishing image
 Response.ContentType = "image/png"
 Set adoStream = Server.CreateObject("ADODB.Stream") 
 adoStream.Open
 adoStream.Type = 1
-FPath = Server.MapPath(path)
-adoStream.LoadFromFile FPath
+adoStream.LoadFromFile Path
 Response.BinaryWrite adoStream.Read 
 adoStream.Close
 Set adoStream = Nothing 
