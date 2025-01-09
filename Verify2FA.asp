@@ -1680,9 +1680,9 @@ var SUPPORTED_ALGS = 4 | 2 | 1;
 		};
 	};
 
-
- // SHA-1 for TOTP 
-
+ //------------------------
+ // SHA-1 for TOTP and HOTP 
+ //------------------------
 
  // Define Totp constructor
   function Totp(expiry, length) {
