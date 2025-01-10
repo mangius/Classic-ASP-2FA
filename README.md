@@ -39,7 +39,7 @@ Set adoStream = Nothing
 ### Verify2FA example (Jscript):
 ```javascript
 var totp = new Totp(30, 6);
-var secret = "ABCDEFGHIJKLMNOP"; // your secret (16 digits)
+var secret = "YOURSECRET123456"; // your secret (16 digits)
 var otp = totp.getOtp(secret); 
 var OTPvalue = "";
 if (Request.Form("OTP") != null && Request.Form("OTP") != undefined) {
