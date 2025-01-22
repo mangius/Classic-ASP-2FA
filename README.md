@@ -20,7 +20,7 @@ dim Path: Path = Server.MapPath("yourpath")
 
 'create QrCode image
 Dim OAuthPath
-OAuthPath = "otpauth://totp/yoursite:youruser?secret=yoursecret&issuer=yoursite"
+OAuthPath = "otpauth://totp/yoursite:youruser?secret=yoursecret16dgts&issuer=yoursite"
 Dim sbls: Set sbls = CreateSymbols(ECR_M, 40, False)
 sbls.AppendText OAuthPath
 Dim sbl: Set sbl = sbls.Item(0)
@@ -39,7 +39,7 @@ Set adoStream = Nothing
 ### Verify2FA example (Jscript):
 ```javascript
 var totp = new Totp(30, 6);
-var secret = "YOURSECRET123456"; // your secret (16 digits)
+var secret = "yoursecret16dgts"; // your secret (16 digits)
 var otp = totp.getOtp(secret); 
 var OTPvalue = "";
 if (Request.Form("OTP") != null && Request.Form("OTP") != undefined) {
