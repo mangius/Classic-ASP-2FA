@@ -37,7 +37,7 @@ adoStream.Close
 Set adoStream = Nothing
 Response.End
 ```
-### Verify2FA example (Jscript):
+### Verify2FA example (javascript):
 ```javascript
 var totp = new Totp(30, 6);
 var secret = "yoursecret16dgts"; // your secret (16 digits)
