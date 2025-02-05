@@ -34,7 +34,8 @@ adoStream.Type = 1
 adoStream.LoadFromFile Path
 Response.BinaryWrite adoStream.Read 
 adoStream.Close
-Set adoStream = Nothing 
+Set adoStream = Nothing
+Response.End
 ```
 ### Verify2FA example (Jscript):
 ```javascript
